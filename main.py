@@ -136,9 +136,10 @@ if __name__ == "__main__":
     config = dict(
         name = "Shallow scrape with threading",
         description = "Scrapes the entire catalog using multiple threads",
-        threads = 1,
-        job = ScrapeJob(letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ", deep=False),
-        threads_per_letter = 1,
+        threads = 20,
+        job = ScrapeJob(letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ", deep=True),
+        #job = ScrapeJob(letters="C", deep=False),
+        threads_per_letter = 4,
     )
 
     # Start scraping
